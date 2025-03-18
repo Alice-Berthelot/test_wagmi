@@ -35,4 +35,4 @@ yarn-error.log*
 next-env.d.ts
 
 #abi
-/src/abi.ts
+abi.ts
