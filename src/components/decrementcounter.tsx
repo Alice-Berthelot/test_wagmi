@@ -27,16 +27,18 @@ export default function DecrementCounter() {
 
   return (
     <>
-    <h3>Decrement</h3>
+    <h3 className='text-xl font-semi-bold pt-3 pb-1'>Decrement</h3>
+    <div className="flex flex-col gap">
     <form onSubmit={submitDefaultDecrement}>
-      <label>Default decrement: </label>
-      <button type="submit">- 1</button>
+      <label className='font-medium'>Default decrement: </label>
+      <button type="submit" className="cursor-pointer bg-neutral-900 text-yellow-600 p-1 w-10 rounded-lg">- 1</button>
     </form>
     <form onSubmit={submitPersonalizedDecrement}>
-      <label>Personalized decrement: </label>
-      <input name="value" placeholder="Enter amount" required />
-      <button type="submit">Decrement</button>
+      <label className='font-medium'>Personalized decrement: </label>
+      <input name="value" placeholder="Enter amount" required className="border border-neutral-900 mr-4 rounded-lg" />
+      <button type="submit" className="cursor-pointer bg-neutral-900 text-yellow-600 p-2 rounded-lg">Decrement</button>
     </form>
+    </div>
     </>
   );
 }

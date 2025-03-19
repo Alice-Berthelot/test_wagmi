@@ -11,9 +11,9 @@ function App() {
   const { disconnect } = useDisconnect()
 
   return (
-    <>
-      <div>
-        <h2>Account</h2>
+    <section className='p-6 flex flex-col gap-4'>
+      <div className='p-4 rounded-lg bg-neutral-900 max-w-max'>
+        <h2 className='text-lg font-bold pb-2'>Account</h2>
 
         <div>
           status: {account.status}
@@ -30,8 +30,8 @@ function App() {
         )}
       </div>
 
-      <div>
-        <h2>Connect</h2>
+      <div className='p-4 rounded-lg bg-neutral-900 max-w-max'>
+        <h2 className='text-lg font-bold pb-2'>Connect</h2>
         {connectors.map((connector) => (
           <button
             key={connector.uid}
@@ -44,12 +44,13 @@ function App() {
         <div>{status}</div>
         <div>{error?.message}</div>
       </div>
-
-      <h2>Counter</h2>
+      <div className='p-8 self-center rounded-lg max-w-max bg-white/80 text-neutral-900'>
+      <h2 className='text-lg font-bold pb-2'>Counter</h2>
       <ReadCounter />
       <IncrementCounter />
       <DecrementCounter />
-    </>
+      </div>
+    </section>
   )
 }
 
